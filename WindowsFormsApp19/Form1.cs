@@ -212,4 +212,5 @@ namespace WindowsFormsApp19
             panel1.BorderStyle = BorderStyle.FixedSingle;
         }
     }
+    
 }

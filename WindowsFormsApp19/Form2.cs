@@ -16,6 +16,8 @@ namespace WindowsFormsApp19
         {
             InitializeComponent();
         }
+        public static List<Airlines> list;
+        Airlines airlines = new Airlines();
         public static string str;
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -36,5 +38,11 @@ namespace WindowsFormsApp19
         {
             str = radioButton3.Text;
         }
+    }
+    public class Airlines
+    {
+        public string Haradan { get; set; }
+        public string Hara { get; set; }
+        public DateTimePicker UcusVaxti { get; set; }
     }
 }
