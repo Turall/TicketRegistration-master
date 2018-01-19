@@ -30,7 +30,7 @@ namespace WindowsFormsApp19
             Form2 form2 = new Form2();
             form2.ShowDialog();
             textBox2.Text = Form2.str;
-            Form2.str = "";
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -143,7 +143,31 @@ namespace WindowsFormsApp19
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Qalxma : ");
+            int qiymet = 0;
+            if (comboBox2.Text == "Ekonom" && Form2.str == "Ankara, Esenboğa, Türkiyə")
+            {
+             qiymet = Convert.ToInt32(textBox5.Text) * 150;
+            MessageBox.Show("Qalxma : " + textBox2.Text + "\n" + "Vaxt : " + textBox3.Text + "\n" + "Enme : " + textBox1.Text + "\n" + "Vaxt : " + textBox4.Text + "\n" +
+                "Xidmet Sinfi : " + comboBox2.Text + "\n" + "Bilet Sayi : " + textBox5.Text + "\n" + "Qiymet :" + qiymet + "Azn" +"\n" );
+            }
+            else if(comboBox2.Text == "Ekonom" && Form2.str == "Ekaterinburg, Rusiya")
+            {
+                qiymet = Convert.ToInt32(textBox5.Text) * 180;
+                MessageBox.Show("Qalxma : " + textBox2.Text + "\n" + "Vaxt : " + textBox3.Text + "\n" + "Enme : " + textBox1.Text + "\n" + "Vaxt : " + textBox4.Text + "\n" +
+                "Xidmet Sinfi : " + comboBox2.Text + "\n" + "Bilet Sayi : " + textBox5.Text + "\n" + "Qiymet :" + qiymet + "Azn" + "\n");
+            }
+           else if (comboBox2.Text == "Biznes" && Form2.str == "Ankara, Esenboğa, Türkiyə")
+            {
+                qiymet = Convert.ToInt32(textBox5.Text) * 250;
+                MessageBox.Show("Qalxma : " + textBox2.Text + "\n" + "Vaxt : " + textBox3.Text + "\n" + "Enme : " + textBox1.Text + "\n" + "Vaxt : " + textBox4.Text + "\n" +
+                    "Xidmet Sinfi : " + comboBox2.Text + "\n" + "Bilet Sayi : " + textBox5.Text + "\n" + "Qiymet :" + qiymet + "Azn" + "\n");
+            }
+            else if (comboBox2.Text == "Biznes" && Form2.str == "Ekaterinburg, Rusiya")
+            {
+                qiymet = Convert.ToInt32(textBox5.Text) * 280;
+                MessageBox.Show("Qalxma : " + textBox2.Text + "\n" + "Vaxt : " + textBox3.Text + "\n" + "Enme : " + textBox1.Text + "\n" + "Vaxt : " + textBox4.Text + "\n" +
+                "Xidmet Sinfi : " + comboBox2.Text + "\n" + "Bilet Sayi : " + textBox5.Text + "\n" + "Qiymet :" + qiymet + "Azn" + "\n");
+            }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -151,7 +175,7 @@ namespace WindowsFormsApp19
             Form2 form2 = new Form2();
             form2.ShowDialog();
             textBox1.Text = Form2.str;
-            Form2.str = "";
+           
         }
 
         private void button10_Click(object sender, EventArgs e)

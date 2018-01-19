@@ -65,7 +65,7 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Ekenom",
+            "Ekonom",
             "Biznes"});
             this.comboBox2.Location = new System.Drawing.Point(642, 78);
             this.comboBox2.Name = "comboBox2";
