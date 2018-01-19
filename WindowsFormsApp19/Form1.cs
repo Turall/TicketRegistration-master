@@ -18,7 +18,7 @@ namespace WindowsFormsApp19
             monthCalendar1.Visible = false;
             panel1.Visible = false;
         }
-        Form2 form2 = new Form2();
+       
         int boyukler = 0,korpeler = 0,usaqlar = 0,sum = 0;
         private void button4_Click(object sender, EventArgs e)
         {
@@ -27,8 +27,10 @@ namespace WindowsFormsApp19
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form2 form2 = new Form2();
             form2.ShowDialog();
             textBox2.Text = Form2.str;
+            Form2.str = "";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,11 +56,7 @@ namespace WindowsFormsApp19
             monthCalendar1.Visible = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            form2.ShowDialog();
-            textBox1.Text = Form2.str;
-        }
+       
         static bool select = false;
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
@@ -141,6 +139,19 @@ namespace WindowsFormsApp19
                 button9.Enabled = true;
             }
             else button9.Enabled = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Qalxma : ");
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+            textBox1.Text = Form2.str;
+            Form2.str = "";
         }
 
         private void button10_Click(object sender, EventArgs e)
