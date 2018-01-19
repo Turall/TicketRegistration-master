@@ -19,7 +19,7 @@ namespace WindowsFormsApp19
             panel1.Visible = false;
         }
        
-        int boyukler = 0,korpeler = 0,usaqlar = 0,sum = 0;
+        int boyukler = 0,korpeler = 0,usaqlar = 0,sum = 0,bcount = 0,kcount = 0,ucount = 0;
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -86,6 +86,7 @@ namespace WindowsFormsApp19
             {
                 button8.Enabled = true;
             }
+            bcount++;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -98,6 +99,7 @@ namespace WindowsFormsApp19
             {
                 button9.Enabled = true;
             }
+            ucount++;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -110,6 +112,7 @@ namespace WindowsFormsApp19
             {
                 button10.Enabled = true;
             }
+            kcount++;
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -126,6 +129,7 @@ namespace WindowsFormsApp19
             {
                 button8.Enabled = false;
             }
+            bcount--;
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -139,6 +143,8 @@ namespace WindowsFormsApp19
                 button9.Enabled = true;
             }
             else button9.Enabled = false;
+
+            ucount--;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -146,28 +152,29 @@ namespace WindowsFormsApp19
             int qiymet = 0;
             if (comboBox2.Text == "Ekonom" && Form2.str == "Ankara, Esenboğa, Türkiyə")
             {
-             qiymet = Convert.ToInt32(textBox5.Text) * 150;
+             qiymet = (bcount * 150) + (ucount * 120) + (kcount * 100);
             MessageBox.Show("Qalxma : " + textBox2.Text + "\n" + "Vaxt : " + textBox3.Text + "\n" + "Enme : " + textBox1.Text + "\n" + "Vaxt : " + textBox4.Text + "\n" +
                 "Xidmet Sinfi : " + comboBox2.Text + "\n" + "Bilet Sayi : " + textBox5.Text + "\n" + "Qiymet :" + qiymet + "Azn" +"\n" );
             }
             else if(comboBox2.Text == "Ekonom" && Form2.str == "Ekaterinburg, Rusiya")
             {
-                qiymet = Convert.ToInt32(textBox5.Text) * 180;
+                qiymet = (bcount * 180) + (ucount * 140) + (kcount * 120);
                 MessageBox.Show("Qalxma : " + textBox2.Text + "\n" + "Vaxt : " + textBox3.Text + "\n" + "Enme : " + textBox1.Text + "\n" + "Vaxt : " + textBox4.Text + "\n" +
                 "Xidmet Sinfi : " + comboBox2.Text + "\n" + "Bilet Sayi : " + textBox5.Text + "\n" + "Qiymet :" + qiymet + "Azn" + "\n");
             }
            else if (comboBox2.Text == "Biznes" && Form2.str == "Ankara, Esenboğa, Türkiyə")
             {
-                qiymet = Convert.ToInt32(textBox5.Text) * 250;
+                qiymet = (bcount * 250) + (ucount * 200) + (kcount * 150);
                 MessageBox.Show("Qalxma : " + textBox2.Text + "\n" + "Vaxt : " + textBox3.Text + "\n" + "Enme : " + textBox1.Text + "\n" + "Vaxt : " + textBox4.Text + "\n" +
                     "Xidmet Sinfi : " + comboBox2.Text + "\n" + "Bilet Sayi : " + textBox5.Text + "\n" + "Qiymet :" + qiymet + "Azn" + "\n");
             }
             else if (comboBox2.Text == "Biznes" && Form2.str == "Ekaterinburg, Rusiya")
             {
-                qiymet = Convert.ToInt32(textBox5.Text) * 280;
+                qiymet = (bcount * 280) + (ucount * 250) + (kcount * 200);
                 MessageBox.Show("Qalxma : " + textBox2.Text + "\n" + "Vaxt : " + textBox3.Text + "\n" + "Enme : " + textBox1.Text + "\n" + "Vaxt : " + textBox4.Text + "\n" +
                 "Xidmet Sinfi : " + comboBox2.Text + "\n" + "Bilet Sayi : " + textBox5.Text + "\n" + "Qiymet :" + qiymet + "Azn" + "\n");
             }
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -189,6 +196,8 @@ namespace WindowsFormsApp19
                 button10.Enabled = true;
             }
             else button10.Enabled = false;
+
+            kcount--;
         }
 
         private void textBox4_Click(object sender, EventArgs e)
